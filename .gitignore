@@ -1,0 +1,16 @@
+# npm
+node_modules/
+npm-debug.log*
+.npm/
+.npmrc
+
+# Build output
+frontend/build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
