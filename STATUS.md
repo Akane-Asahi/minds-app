@@ -1,7 +1,7 @@
 # STATUS.md
 
 Read this first in every session. Update it at the end of every session (done / next / blocked).
-Last updated: 2026-10-16.
+Last updated: 2026-10-16 (build order changed to UI first).
 
 ## Where we are
 
@@ -14,24 +14,23 @@ Express + Mongoose); no MINDS feature code exists yet. The spec is split into `d
 - Context system: `CLAUDE.md`, `docs/spec/` (per-feature files), `DECISIONS.md`, `stack_changed.md`,
   `docs/templates/feature-brief.md`.
 
-## Next (in order)
+## Next (in order; details in docs/spec/build-plan.md)
 
-1. **Data contract:** Mongoose schemas for the new collections and Zod schemas for the LLM calls
-   (02-data-model.md, F2, F4). First resolve `SavedDoc` vs `savedresults` (open-questions.md 3).
-2. **Mock Primo fixtures** (04-primo.md): pools of 10 with missing abstracts, duplicates, a failing call.
-3. **Invariant tests** for the 7 rules (01-core.md).
-4. **Adapt the scaffold:** add test runners, `zod`, `express-rate-limit`, React Query (stack_changed.md);
-   confirm the app still runs against a separate MongoDB database.
-5. **Accessibility baseline:** tokens and the contrast-check test (accessibility.md).
-6. **Subagents:** spec-reviewer and accessibility-checker in `.claude/agents/`.
-7. **Build, in vertical slices:** F1 (Plan Workspace + 5.1) first, then F2 + F3, then F4, F5, F6, F7.
-8. Scoring validation plan and a latency measurement (open-questions.md).
+**Phase 1, UI with mock data:** U0 fixtures + dev routes + contrast check; U1 Plan Workspace;
+U2 SERP; U3 Your sessions; U4 Saved results view.
+**Phase 2, interaction:** I0 data contract + scaffold + LLM client; I1 F1 wiring; I2 F2 pipeline;
+I3 F3 wiring; I4 F4; I5 F5; I6 F6; I7 navigation between screens; I8 F7 logging.
+
+Also before or alongside:
+- Subagents: spec-reviewer and a11y-checker in `.claude/agents/`.
+- Invariant tests for the 7 rules (01-core.md), starting in I0.
+- Scoring validation plan and a latency measurement (open-questions.md).
 
 ## Blocked or needs Telot
 
-- LLM provider, key and budget (needed before F1 can call a model).
+- LLM provider, key and budget (needed at I0/I1, not for the UI phase).
 - Logging plan (F7): ethics coverage and Baseline's original event names.
-- `SavedDoc` vs `savedresults` decision.
+- `SavedDoc` vs `savedresults` decision (needed at I0, not for the UI phase).
 
 ## Notes
 

@@ -23,8 +23,9 @@ Thesis writing, Orland's rules, references and the planning documents live in a 
 
 1. Read `STATUS.md` (done, next, blocked).
 2. Read `docs/spec/00-index.md`, then `docs/spec/01-core.md`, then only the files the job needs.
-3. One feature per session. Plan first and check the plan against the feature file's acceptance
-   criteria before writing code.
+3. One session = one row of `docs/spec/build-plan.md` (UI first: U0 to U4, then interaction: I0 to I8).
+   In a UI session use mock fixtures only: no network, LLM or database calls.
+   Plan first and check the plan against the feature file's acceptance criteria before writing code.
 4. If the user's request conflicts with the spec, say so, then update the spec. Telot's latest
    statement is the decision.
 5. At the end: update the feature file if behaviour changed, add a dated line to `DECISIONS.md`,

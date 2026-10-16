@@ -4,6 +4,14 @@ Dated log of decisions. Newest first. The feature files in `docs/spec/` hold the
 this file holds when and why it changed. Add a line here in the same session as any spec change.
 Telot's latest statement is the decision.
 
+## 2026-10-16 (build order)
+
+- **UI first, interaction second.** All screens are built as UI with mock fixtures (sessions U0 to U4)
+  before any LLM, database or navigation is wired (sessions I0 to I8). F1 to F7 stay the behaviour
+  spec; `docs/spec/build-plan.md` says what each session builds. LLM provider, key and the `SavedDoc`
+  decision are therefore needed at I0, not before the UI phase.
+- **Spec changes** go to the planning document (thesis repo, v27) and to `docs/spec/` together.
+
 ## 2026-10-16 (context setup; Telot answered Q1 to Q8)
 
 - **Scoring reasons (Q1 B):** the 5.3 call writes a reasoning sentence only for the chips a card
