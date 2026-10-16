@@ -65,7 +65,7 @@ Workspaces list (Baseline, unchanged).
 | `EMERGING_GOAL_MIN` | 2 | a new direction needs goal relevance **strictly greater** than this |
 | `SUGGESTION_LIMIT` | 3 | max active suggested new directions |
 | `SESSION_GAP` | 1 hour | idle **more than** this starts a new session |
-| `IDLE_CAP` | 5 minutes | idle stretches count as at most this toward `active_seconds` |
+| `IDLE_CAP` | 5 minutes | idle stretches count as at most this toward `activeSeconds` |
 | `MAX_SNAPSHOT_BLOCKS` | 6 | journey-strip blocks before "+N more" |
 | `BAR_MIN_CAPACITY` | 10 | bar scale: unit = trackWidth / max(BAR_MIN_CAPACITY, largest total) |
 | `MIN_SEGMENT_PX` | 32 | minimum bar segment width |
