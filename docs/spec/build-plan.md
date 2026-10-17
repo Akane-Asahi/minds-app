@@ -21,13 +21,15 @@ before any model or database is wired in.
 - Use `utils/userScopedStorage.js`, React Query and React Router state only as far as Phase 2 needs
   them; do not add them yet.
 
+Every U-session also opens its mockups in `docs/design/` (see `docs/design/README.md`).
+
 | Session | Build | Load | Done when |
 |---|---|---|---|
 | U0 | Fixtures + dev route shell + token and contrast check | 01-core, accessibility, 02-data-model, 04-primo | fixtures typed; `/ui` index lists screens; contrast test passes |
-| U1 | Plan Workspace (layout, direction list, all states) | F1 (Layout, States), accessibility | F1 layout and states match; a11y checklist passes |
-| U2 | SERP: card, chips, `>>`, chip colours, right panels, header toggle | F3, F2 (controls and states only), accessibility | F3 card, chip, colour sections match |
-| U3 | Your sessions: tiles, journey strip, bars, check-out | F5 (Layout, States), accessibility | F5 layout and states match |
-| U4 | Saved results view + wayfinding + empty state | F6, F3 (card only) | F6 layout and empty state match |
+| U1 | Plan Workspace (layout, direction list, all states) | F1 (Layout, States), accessibility, design: `01-*` | F1 layout and states match; a11y checklist passes |
+| U2 | SERP: card, chips, `>>`, chip colours, right panels, header toggle | F3, F2 (controls and states only), accessibility, design: `02-*` | F3 card, chip, colour sections match |
+| U3 | Your sessions: tiles, journey strip, bars, check-out | F5 (Layout, States), accessibility, design: `03-*` | F5 layout and states match |
+| U4 | Saved results view + wayfinding + empty state | F6, F3 (card only), design: `04-*`, `05-*`, `06-*` | F6 layout and empty state match |
 
 ## Phase 2: interaction (real data, LLM, navigation)
 

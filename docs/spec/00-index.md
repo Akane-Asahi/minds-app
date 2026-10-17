@@ -9,6 +9,7 @@ which sections of each feature file a session builds.
 
 | Job | Load |
 |---|---|
+| What a screen should look like (UI sessions) | docs/design/README.md, then the PNGs for that screen |
 | Which session is next, and how much of a feature file to build | build-plan.md |
 | Plan Workspace screen, direction generation (5.1) | F1-plan-workspace.md, 03-api.md, accessibility.md |
 | Search, query generation (5.2), scoring (5.3), ranking | F2-serp-pipeline.md, 04-primo.md, 03-api.md |

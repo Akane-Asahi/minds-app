@@ -10,6 +10,8 @@ Telot's latest statement is the decision.
   before any LLM, database or navigation is wired (sessions I0 to I8). F1 to F7 stay the behaviour
   spec; `docs/spec/build-plan.md` says what each session builds. LLM provider, key and the `SavedDoc`
   decision are therefore needed at I0, not before the UI phase.
+- **Mockups live in this repo:** the 10 screenshots were copied to `docs/design/` so every UI session
+  can open them; the spec wins where a mockup differs (README there lists the known differences).
 - **Spec changes** go to the planning document (thesis repo, v27) and to `docs/spec/` together.
 
 ## 2026-10-16 (context setup; Telot answered Q1 to Q8)
